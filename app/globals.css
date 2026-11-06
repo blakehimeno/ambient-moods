@@ -4,3 +4,23 @@ body {
   background: #0b0d12;
   color: #e8e8ec;
 }
+
+@keyframes drift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);   opacity: 0.5; }
+  50%      { transform: translate(-50%, -50%) scale(1.2); opacity: 0.85; }
+}
+
+.animate-drift {
+  background-size: 300% 300%;
+  animation: drift 24s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: breathe 10s ease-in-out infinite;
+}
